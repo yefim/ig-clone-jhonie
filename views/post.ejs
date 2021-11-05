@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Post an Instagram Photo</h1>
+    <% if (error) { %>
+      <p style="background: red; color: white;"><%= error %></p>
+    <% } %>
+    <form method="post" action="/post" enctype="multipart/form-data">
+      <input type="file" name="photo">
+      <label for="caption">Caption</label>
+      <input id="caption" type="text" name="caption">
+      <button type="submit">Post</button>
+    </form>
+  </body>
+</html>

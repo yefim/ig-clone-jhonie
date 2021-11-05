@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .post {
+        background: #eee;
+        padding: 8px;
+        margin: 4px;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Instagram Home</h1>
+    <a href="/post">Post a Photo</a>
+    <div class="posts">
+      <% posts.forEach(function(post) { %>
+        <div class="post">
+          <img height="100" src="<%= post.photoUrl %>">
+          <p><%= post.caption %></p>
+        </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
